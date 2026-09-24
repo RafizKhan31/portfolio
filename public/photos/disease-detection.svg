@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="medBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041215"/>
+      <stop offset="100%" stop-color="#082026"/>
+    </linearGradient>
+    <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#medBg)"/>
+
+  <!-- Subtle Medical Cross Grid -->
+  <g opacity="0.1" stroke="#10B981" stroke-width="1">
+    <path d="M 100 50 L 100 70 M 90 60 L 110 60"/>
+    <path d="M 400 50 L 400 70 M 390 60 L 410 60"/>
+    <path d="M 700 50 L 700 70 M 690 60 L 710 60"/>
+    <path d="M 100 450 L 100 470 M 90 460 L 110 460"/>
+    <path d="M 700 450 L 700 470 M 690 460 L 710 460"/>
+  </g>
+
+  <!-- Stylized DNA Double Helix in the Center -->
+  <g stroke="url(#dnaGrad)" stroke-width="2" opacity="0.8">
+    <path d="M 300 120 Q 350 200 400 200 T 500 280 T 400 360" fill="none"/>
+    <path d="M 500 120 Q 450 200 400 200 T 300 280 T 400 360" fill="none"/>
+    <!-- Connecting rungs -->
+    <line x1="330" y1="150" x2="470" y2="150" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="370" y1="180" x2="430" y2="180" stroke="#10B981" stroke-width="1.5"/>
+    <line x1="400" y1="200" x2="400" y2="200" stroke="#06B6D4" stroke-width="4"/>
+    <line x1="370" y1="220" x2="430" y2="220" stroke="#10B981" stroke-width="1.5"/>
+    <line x1="330" y1="250" x2="470" y2="250" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="370" y1="320" x2="430" y2="320" stroke="#10B981" stroke-width="1.5"/>
+  </g>
+
+  <!-- Left: Clinical Diagnostic Symptoms Panel -->
+  <g transform="translate(60, 90)">
+    <rect width="240" height="280" rx="12" fill="#08181D" stroke="#10B981" stroke-width="1.5" opacity="0.9"/>
+    <text x="20" y="30" fill="#34D399" font-family="monospace" font-size="11" font-weight="bold">INPUT SYMPTOM TRIAGE</text>
+
+    <!-- Symptom 1 -->
+    <text x="20" y="65" fill="#E2E8F0" font-family="sans-serif" font-size="12">Persistent Fatigue</text>
+    <rect x="20" y="75" width="200" height="6" rx="3" fill="#132E35"/>
+    <rect x="20" y="75" width="165" height="6" rx="3" fill="#10B981"/>
+
+    <!-- Symptom 2 -->
+    <text x="20" y="115" fill="#E2E8F0" font-family="sans-serif" font-size="12">High Fever / Chills</text>
+    <rect x="20" y="125" width="200" height="6" rx="3" fill="#132E35"/>
+    <rect x="20" y="125" width="180" height="6" rx="3" fill="#10B981"/>
+
+    <!-- Symptom 3 -->
+    <text x="20" y="165" fill="#E2E8F0" font-family="sans-serif" font-size="12">Joint &amp; Muscle Pain</text>
+    <rect x="20" y="175" width="200" height="6" rx="3" fill="#132E35"/>
+    <rect x="20" y="175" width="140" height="6" rx="3" fill="#10B981"/>
+
+    <!-- Symptom 4 -->
+    <text x="20" y="215" fill="#E2E8F0" font-family="sans-serif" font-size="12">Skin Rash / Erythema</text>
+    <rect x="20" y="225" width="200" height="6" rx="3" fill="#132E35"/>
+    <rect x="20" y="225" width="120" height="6" rx="3" fill="#10B981"/>
+
+    <text x="20" y="260" fill="#06B6D4" font-family="monospace" font-size="10">132 Clinical Symptoms Encoded</text>
+  </g>
+
+  <!-- Right: ML Prediction & Medicine Recommendation Panel -->
+  <g transform="translate(500, 90)">
+    <rect width="240" height="280" rx="12" fill="#08181D" stroke="#06B6D4" stroke-width="1.5" opacity="0.9"/>
+    <text x="20" y="30" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="bold">ENSEMBLE CLASSIFICATION</text>
+
+    <!-- Predicted Disease -->
+    <rect x="20" y="50" width="200" height="65" rx="8" fill="#0C252D" stroke="#0284C7" stroke-width="1"/>
+    <text x="30" y="70" fill="#94A3B8" font-family="monospace" font-size="10">TOP PREDICTED CONDITION</text>
+    <text x="30" y="90" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold">Dengue Viral Fever</text>
+    <text x="30" y="105" fill="#10B981" font-family="monospace" font-size="10">Ensemble Match: 96.4%</text>
+
+    <!-- Medicine Recommendation -->
+    <rect x="20" y="130" width="200" height="85" rx="8" fill="#0C252D" stroke="#10B981" stroke-width="1"/>
+    <text x="30" y="150" fill="#34D399" font-family="monospace" font-size="10">RECOMMENDED MEDICINE</text>
+    <text x="30" y="170" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold">Paracetamol 500mg</text>
+    <text x="30" y="188" fill="#94A3B8" font-family="sans-serif" font-size="11">+ Oral Rehydration Salts (ORS)</text>
+    <text x="30" y="204" fill="#F59E0B" font-family="sans-serif" font-size="10">Contraindication: Avoid NSAIDs</text>
+
+    <text x="20" y="250" fill="#10B981" font-family="monospace" font-size="11">● REST API Status: &lt; 150ms</text>
+  </g>
+
+  <!-- Title Bottom Banner -->
+  <text x="400" y="440" fill="#94A3B8" font-family="monospace" font-size="12" text-anchor="middle" letter-spacing="2">DISEASE DETECTION &amp; MEDICINE RECOMMENDATION · ARCHITECTURE</text>
+</svg>

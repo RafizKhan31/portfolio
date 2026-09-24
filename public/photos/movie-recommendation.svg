@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="movBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140A05"/>
+      <stop offset="100%" stop-color="#241209"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#movBg)"/>
+
+  <!-- Left: Movie Catalog Cards Grid -->
+  <g transform="translate(60, 60)">
+    <!-- Movie Card 1 (Query Film) -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="230" rx="10" fill="#2E170E" stroke="#F59E0B" stroke-width="2"/>
+      <rect x="15" y="15" width="150" height="120" rx="6" fill="#1C0D07"/>
+      <text x="90" y="80" fill="#F59E0B" font-family="sans-serif" font-size="24" text-anchor="middle">🎬</text>
+      <text x="15" y="155" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold">Interstellar</text>
+      <text x="15" y="172" fill="#94A3B8" font-family="sans-serif" font-size="11">Sci-Fi · Space · Time</text>
+      <rect x="15" y="185" width="150" height="24" rx="4" fill="#F59E0B"/>
+      <text x="90" y="201" fill="#140A05" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">ACTIVE QUERY ITEM</text>
+    </g>
+
+    <!-- Movie Card 2 (Match 1) -->
+    <g transform="translate(200, 0)">
+      <rect width="180" height="230" rx="10" fill="#22100A" stroke="#F97316" stroke-width="1.5"/>
+      <rect x="15" y="15" width="150" height="120" rx="6" fill="#1C0D07"/>
+      <text x="90" y="80" fill="#F97316" font-family="sans-serif" font-size="24" text-anchor="middle">🚀</text>
+      <text x="15" y="155" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold">The Martian</text>
+      <text x="15" y="172" fill="#94A3B8" font-family="sans-serif" font-size="11">Sci-Fi · Survival · Mars</text>
+      <text x="15" y="200" fill="#10B981" font-family="monospace" font-size="11" font-weight="bold">Cosine Sim: 0.942</text>
+    </g>
+
+    <!-- Movie Card 3 (Match 2) -->
+    <g transform="translate(400, 0)">
+      <rect width="180" height="230" rx="10" fill="#22100A" stroke="#EA580C" stroke-width="1.5"/>
+      <rect x="15" y="15" width="150" height="120" rx="6" fill="#1C0D07"/>
+      <text x="90" y="80" fill="#EA580C" font-family="sans-serif" font-size="24" text-anchor="middle">🌌</text>
+      <text x="15" y="155" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold">Contact</text>
+      <text x="15" y="172" fill="#94A3B8" font-family="sans-serif" font-size="11">Sci-Fi · Astronomy</text>
+      <text x="15" y="200" fill="#10B981" font-family="monospace" font-size="11" font-weight="bold">Cosine Sim: 0.898</text>
+    </g>
+  </g>
+
+  <!-- Right/Bottom: Cosine Distance Formula & Vector Space Graph -->
+  <g transform="translate(60, 310)">
+    <rect width="680" height="125" rx="12" fill="#1C0D07" stroke="#F59E0B" stroke-width="1"/>
+    
+    <g transform="translate(25, 20)">
+      <text x="0" y="18" fill="#FBBF24" font-family="monospace" font-size="11" font-weight="bold">CONTENT-BASED VECTOR MATCHING</text>
+      <text x="0" y="42" fill="#E2E8F0" font-family="sans-serif" font-size="12">Matrix Dimension: 10,000+ Movies × TF-IDF Genre &amp; Tag Embeddings</text>
+      <text x="0" y="62" fill="#94A3B8" font-family="sans-serif" font-size="11">Engine: Python + Django + Scikit-Learn Cosine Similarity</text>
+      <text x="0" y="85" fill="#10B981" font-family="monospace" font-size="11">● Benchmark: Sub-second Top-10 Retrieval (&lt; 180ms)</text>
+    </g>
+
+    <g transform="translate(480, 20)">
+      <rect width="170" height="85" rx="8" fill="#2E170E" stroke="#78350F" stroke-width="1"/>
+      <text x="15" y="25" fill="#F59E0B" font-family="monospace" font-size="10">SIMILARITY METRIC</text>
+      <text x="15" y="50" fill="#FFFFFF" font-family="monospace" font-size="12">cos(θ) = A · B / ‖A‖‖B‖</text>
+      <text x="15" y="70" fill="#34D399" font-family="monospace" font-size="10">Rank: O(N log K)</text>
+    </g>
+  </g>
+
+  <!-- Title Bottom Banner -->
+  <text x="400" y="475" fill="#94A3B8" font-family="monospace" font-size="12" text-anchor="middle" letter-spacing="2">MOVIE RECOMMENDATION ENGINE · ARCHITECTURE</text>
+</svg>

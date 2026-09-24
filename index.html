@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md. Rafej Khan | Python Developer & AI/ML Engineer</title>
+    <meta name="description" content="Md. Rafej Khan is a Python Developer, AI/ML Engineer and Deep Learning Researcher specializing in machine learning, deep learning, NLP, LLM applications, automation and scalable AI systems." />
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+
+    <!-- OpenGraph Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Md. Rafej Khan | Python Developer & AI/ML Engineer" />
+    <meta property="og:description" content="Md. Rafej Khan is a Python Developer, AI/ML Engineer and Deep Learning Researcher specializing in machine learning, deep learning, NLP, LLM applications, automation and scalable AI systems." />
+    <meta property="og:site_name" content="Md. Rafej Khan Portfolio" />
+    <meta property="og:image" content="./assets/images/general/og-image.jpg" />
+    
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Md. Rafej Khan | Python Developer & AI/ML Engineer" />
+    <meta name="twitter:description" content="Md. Rafej Khan is a Python Developer, AI/ML Engineer and Deep Learning Researcher specializing in machine learning, deep learning, NLP, LLM applications, automation and scalable AI systems." />
+    <meta name="twitter:image" content="./assets/images/general/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Instant Theme Pre-Initialization to prevent flash of wrong theme -->
+    <script>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme_preference') || 'dark';
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = savedTheme === 'dark' || (savedTheme === 'system' && prefersDark);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Schema.org JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "#person",
+          "name": "Md. Rafej Khan",
+          "jobTitle": "Python Developer, AI/ML Engineer & Deep Learning Researcher",
+          "description": "Building intelligent systems with Python, Machine Learning, Deep Learning, NLP, LLMs, and scalable cloud technologies.",
+          "email": "rafezkhan3109@gmail.com",
+          "telephone": "+8801635045602",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Savar",
+            "addressRegion": "Dhaka",
+            "addressCountry": "Bangladesh"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/mdrafejkhan/",
+            "https://github.com/RafizKhan31"
+          ],
+          "knowsAbout": [
+            "Python",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Deep Learning",
+            "Quantum Neural Networks",
+            "Natural Language Processing",
+            "Large Language Models",
+            "TensorFlow",
+            "PyTorch",
+            "AWS",
+            "Google Cloud Platform"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Md. Rafej Khan Portfolio",
+          "url": "https://rafejkhan.dev",
+          "author": {
+            "@id": "#person"
+          },
+          "description": "Portfolio of Md. Rafej Khan – Python Developer, AI/ML Engineer, and Deep Learning Researcher."
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="antialiased selection:bg-cyan-500/20 selection:text-cyan-400">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0B132B"/>
+      <stop offset="100%" stop-color="#1C2541"/>
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A373"/>
+      <stop offset="100%" stop-color="#BC6C25"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Neural mesh background lines -->
+  <g opacity="0.25" stroke="#06B6D4" stroke-width="1">
+    <line x1="100" y1="150" x2="250" y2="100"/>
+    <line x1="250" y1="100" x2="400" y2="80"/>
+    <line x1="400" y1="80" x2="550" y2="110"/>
+    <line x1="550" y1="110" x2="700" y2="180"/>
+    <line x1="100" y1="350" x2="200" y2="280"/>
+    <line x1="600" y1="280" x2="720" y2="350"/>
+    <line x1="150" y1="600" x2="250" y2="680"/>
+    <line x1="550" y1="680" x2="680" y2="580"/>
+  </g>
+  <g opacity="0.4" fill="#3B82F6">
+    <circle cx="250" cy="100" r="4"/>
+    <circle cx="400" cy="80" r="5" fill="#06B6D4"/>
+    <circle cx="550" cy="110" r="4"/>
+    <circle cx="200" cy="280" r="4"/>
+    <circle cx="600" cy="280" r="4"/>
+  </g>
+
+  <!-- Ambient lighting ring behind portrait -->
+  <circle cx="400" cy="420" r="280" fill="none" stroke="url(#cyanBlue)" stroke-width="3" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="400" cy="420" r="260" fill="none" stroke="#6366F1" stroke-width="1.5" opacity="0.2" stroke-dasharray="8 8"/>
+
+  <!-- Portrait Silhouette & Illustration -->
+  <!-- Shoulders & Torso -->
+  <path d="M 230 680 C 240 560, 310 520, 400 520 C 490 520, 560 560, 570 680 L 590 800 L 210 800 Z" fill="url(#shirtGrad)"/>
+  <path d="M 330 520 Q 400 560 470 520 Q 400 575 330 520" fill="#090D16" opacity="0.6"/>
+
+  <!-- Neck -->
+  <rect x="365" y="430" width="70" height="110" rx="20" fill="url(#skinGrad)"/>
+
+  <!-- Head Base -->
+  <ellipse cx="400" cy="360" rx="95" ry="120" fill="url(#skinGrad)"/>
+
+  <!-- Ears -->
+  <ellipse cx="300" cy="365" rx="16" ry="26" fill="#BC6C25"/>
+  <ellipse cx="500" cy="365" rx="16" ry="26" fill="#BC6C25"/>
+
+  <!-- Hair (Modern styled tech look) -->
+  <path d="M 295 340 C 290 240, 340 210, 400 210 C 460 210, 510 235, 505 340 C 490 280, 450 250, 400 250 C 350 250, 310 280, 295 340 Z" fill="#111827"/>
+  <path d="M 310 290 Q 400 230 490 270 Q 400 210 310 290" fill="#1F2937"/>
+
+  <!-- Beard Trim (Subtle professional trim) -->
+  <path d="M 335 390 C 345 460, 455 460, 465 390 C 450 435, 350 435, 335 390 Z" fill="#111827" opacity="0.85"/>
+
+  <!-- Eyes & Eyebrows -->
+  <path d="M 345 320 Q 370 315 385 322" stroke="#111827" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M 455 320 Q 430 315 415 322" stroke="#111827" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="365" cy="336" r="6" fill="#111827"/>
+  <circle cx="367" cy="334" r="2" fill="#FFFFFF"/>
+  <circle cx="435" cy="336" r="6" fill="#111827"/>
+  <circle cx="437" cy="334" r="2" fill="#FFFFFF"/>
+
+  <!-- Nose -->
+  <path d="M 400 335 L 403 370 L 393 376" stroke="#A75A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Mouth -->
+  <path d="M 380 405 Q 400 415 420 405" stroke="#873E11" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- AI HUD Interface Elements Overlaid -->
+  <!-- Target Reticle & Neural Metrics -->
+  <g opacity="0.8">
+    <rect x="250" y="650" width="300" height="50" rx="10" fill="#0F172A" stroke="#06B6D4" stroke-width="1.5" opacity="0.9"/>
+    <text x="400" y="675" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">MD. RAFEJ KHAN</text>
+    <text x="400" y="692" fill="#06B6D4" font-family="monospace" font-size="11" text-anchor="middle">PYTHON DEV · AI/ML ENGINEER · RESEARCHER</text>
+  </g>
+
+  <!-- Left Tech Tag: PyTorch / TF -->
+  <g transform="translate(80, 260)">
+    <rect width="140" height="42" rx="8" fill="#0F172A" stroke="#3B82F6" stroke-width="1" opacity="0.85"/>
+    <circle cx="20" cy="21" r="5" fill="#3B82F6"/>
+    <text x="35" y="25" fill="#E2E8F0" font-family="monospace" font-size="11">Deep Learning</text>
+  </g>
+
+  <!-- Right Tech Tag: QNN Research -->
+  <g transform="translate(580, 260)">
+    <rect width="140" height="42" rx="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1" opacity="0.85"/>
+    <circle cx="20" cy="21" r="5" fill="#06B6D4"/>
+    <text x="35" y="25" fill="#E2E8F0" font-family="monospace" font-size="11">QNN Research</text>
+  </g>
+
+  <!-- Bottom Left Tech Tag: Cloud Deploy -->
+  <g transform="translate(80, 520)">
+    <rect width="140" height="42" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1" opacity="0.85"/>
+    <circle cx="20" cy="21" r="5" fill="#10B981"/>
+    <text x="35" y="25" fill="#E2E8F0" font-family="monospace" font-size="11">AWS &amp; GCP ML</text>
+  </g>
+
+  <!-- Bottom Right Tech Tag: LLM & RAG -->
+  <g transform="translate(580, 520)">
+    <rect width="140" height="42" rx="8" fill="#0F172A" stroke="#8B5CF6" stroke-width="1" opacity="0.85"/>
+    <circle cx="20" cy="21" r="5" fill="#8B5CF6"/>
+    <text x="35" y="25" fill="#E2E8F0" font-family="monospace" font-size="11">LLMs &amp; RAG</text>
+  </g>
+</svg>
